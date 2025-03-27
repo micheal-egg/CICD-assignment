@@ -59,6 +59,9 @@ jobs:
           run: ls -al
 
     # Step 7: Build docker image 
+      - name: Run Python tests
+        run: |
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/backend_flask:latest .
     # Go to dockerhub.com
     # Create a new repository - backend_flask
     # Create a new access token - <access_token>
